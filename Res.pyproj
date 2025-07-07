@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{25d4c49a-038d-4fd8-a909-8ab2c97ffc3f}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>Bot.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Bot.py" />
+    <Compile Include="Core\API.py" />
+    <Compile Include="Service\DB.py" />
+    <Compile Include="Service\JSONQuestConvert.py" />
+    <Compile Include="Core\Service.py" />
+    <Compile Include="Service\TG.py" />
+    <Compile Include="Service\VK.py" />
+    <Compile Include="StateMachine\Manager.py" />
+    <Compile Include="StateMachine\Questing.py" />
+    <Compile Include="Utill\AsyncHandler.py" />
+    <Compile Include="Utill\FSM.py" />
+    <Compile Include="Utill\Log.py" />
+    <Compile Include="Utill\Settings.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\TG_STATE\" />
+    <Folder Include="Data\VK_STATE\" />
+    <Folder Include="presentation\" />
+    <Folder Include="Service\" />
+    <Folder Include="Settings\" />
+    <Folder Include="StateMachine\" />
+    <Folder Include="Utill\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="candidate.png" />
+    <Content Include="Data\AnketBase.db" />
+    <Content Include="manager.png" />
+    <Content Include="Settings\quest.json" />
+    <Content Include="Settings\TG.json" />
+    <Content Include="Settings\VK.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
